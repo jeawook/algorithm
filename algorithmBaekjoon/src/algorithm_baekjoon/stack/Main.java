@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+//백준 10828번 스택
 public class Main {
     static int[] stack;
     static int top = -1;
