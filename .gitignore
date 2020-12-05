@@ -5,3 +5,12 @@
 *.classpath
 
 
+*.properties
+algorithmBook/.idea/misc.xml
+algorithmBook/.idea/misc.xml
+algorithmBook/.gradle/checksums/checksums.lock
+algorithmBook/.gradle/buildOutputCleanup/buildOutputCleanup.lock
+algorithmBook/.gradle/6.5.1/fileHashes/fileHashes.lock
+algorithmBook/.gradle/6.5.1/fileChanges/last-build.bin
+algorithmBook/.gradle/6.5.1/executionHistory/executionHistory.lock
+algorithmBook/.idea/misc.xml
