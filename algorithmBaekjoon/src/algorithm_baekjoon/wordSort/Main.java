@@ -24,12 +24,14 @@ public class Main {
         Comparator<String> stringComparator = new Comparator<String>() {
             @Override
             public int compare(String o1, String o2) {
-                if (o1.length() < o2.length()){
-                    return -1;
-                }else if (o1.length() == o2.length()){
+                // 단어 길이가 같을 경우
+                if (o1.length() == o2.length()) {
                     return o1.compareTo(o2);
                 }
-                return 0;
+                // 그 외의 경우
+                else {
+                    return o1.length() - o2.length();
+                }
             }
         };
 
