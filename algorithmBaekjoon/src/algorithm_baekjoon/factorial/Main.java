@@ -13,8 +13,16 @@ public class Main {
         return n * factorial(--n);
     }
     public static void main(String[] args) throws IOException {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        /*BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
-        System.out.println(factorial(n));
+        System.out.println(factorial(n));*/
+        
+        int a = 10000;
+        for (int i=0;i<a;i++){
+
+            if (i %2 == 0 ){
+                System.out.println("i = " + i);
+            }
+        }
     }
 }
