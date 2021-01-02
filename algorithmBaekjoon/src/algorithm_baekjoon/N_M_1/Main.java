@@ -18,10 +18,10 @@ public class Main {
         int M = Integer.parseInt(st.nextToken());
         arr = new int[M];
         visit = new boolean[N];
-        dfs(N,M,0, 0);
+        dfs(N,M,0);
         System.out.println(sb.toString());
     }
-    static void dfs(int N, int M, int depth,int at) {
+    static void dfs(int N, int M, int depth) {
         if (M == depth) {
             for (int tmp : arr) {
                 sb.append(tmp+" ");
@@ -30,9 +30,14 @@ public class Main {
             return;
         }
 
-        for (int i=at;i<N;i++) {
-            arr[depth] = i+1;
-            dfs(N,M,depth+1, i+1);
+        for (int i=0;i<N;i++) {
+            if (!visit[i]) {
+                visit[i] = true;
+                arr[depth] = i+1;
+                dfs(N,M,depth+1);
+                visit[i] = false;
+            }
+
         }
 
     }
