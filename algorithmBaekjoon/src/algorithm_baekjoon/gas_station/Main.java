@@ -7,7 +7,6 @@ import java.util.StringTokenizer;
 
 //13305번 주유소
 public class Main {
-    static int min;
     static int N;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
