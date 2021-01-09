@@ -1,4 +1,4 @@
-package algorithm_baekjoon.code_test.ant_warrior;
+package algorithm_baekjoon.code_test;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
 //개미 전사
-public class Main {
+public class AntWarrior {
     static int[] dp;
     static int[] arr;
     static int N;
