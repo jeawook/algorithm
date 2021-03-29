@@ -1,6 +1,8 @@
+package SW.algorithm;
+
 import java.util.Scanner;
 
-public class Ladder1 {
+public class SupplyRoute {
 
     public static void main(String args[]) throws Exception
     {
@@ -17,45 +19,32 @@ public class Ladder1 {
 		   표준입력 System.in 으로부터 스캐너를 만들어 데이터를 읽어옵니다.
 		 */
         Scanner sc = new Scanner(System.in);
-        int T = 10;
+        int T;
+        T=sc.nextInt();
 		/*
 		   여러 개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 		*/
 
         for(int test_case = 1; test_case <= T; test_case++)
         {
-            String t = sc.nextLine();
+
             /////////////////////////////////////////////////////////////////////////////////////////////
 			/*
 				 이 부분에 여러분의 알고리즘 구현이 들어갑니다.
 			 */
             /////////////////////////////////////////////////////////////////////////////////////////////
-
-            char[][] chars = new char[100][100];
-            int end = 0;
-            for (int i=0; i < 100; i++) {
-                String logic = sc.nextLine();
-                logic = logic.replaceAll(" ", "");
-                if (i == 99) {
-                    end = logic.indexOf("2");
+            int N = sc.nextInt();
+            int[][] arr = new int[N][N];
+            for (int i = 0; i < N; i++) {
+                for (int j = 0; j < N; j++) {
+                    arr[i][j] = sc.nextInt();
                 }
-                chars[i] = logic.toCharArray();
             }
-            int point = end;
 
-            for (int i= 99; i >= 0; i--) {
-                if (point > 0 && chars[i][point -1] == '1' ) {
-                    while (point > 0 && chars[i][point -1] == '1') {
-                        point--;
-                    }
-                } else if (point < 99 && chars[i][point +1] == '1') {
-                    while (point < 99 && chars[i][point +1] == '1') {
-                        point++;
-                    }
-                }
-
-            }
-            System.out.println("#"+test_case+" "+point);
         }
+    }
+
+    static void bfs(int[][]  arr, int x, int y) {
+
     }
 }
