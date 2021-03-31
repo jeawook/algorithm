@@ -1,7 +1,7 @@
 package algorithm_progremers.workout_clothes;
 
 //greedy 체육복
-public class Solution {
+class Solution {
     /**
      *
      * @param n = 5
