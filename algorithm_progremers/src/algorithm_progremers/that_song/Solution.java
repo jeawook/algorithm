@@ -8,10 +8,13 @@ public class Solution {
     public static void main(String[] args) {
         //String m = "ABCDEFG";
         //String m = "CC#BCC#BCC#BCC#B";
-        String m = "ABC";
+        //String m = "ABC";
+        String m = "CCB";
         //String[] musicinfos = {"12:00,12:14,HELLO,CDEFGAB", "13:00,13:05,WORLD,ABCDEF"};
         //String[] musicinfos = {"03:00,03:30,FOO,CC#B", "04:00,04:08,BAR,CC#BCC#BCC#B"};
-        String[] musicinfos = {"11:59,12:21,HELLO,C#DEFGAB", "13:01,13:05,WORLD,ABCDEF"};
+        //String[] musicinfos = {"13:00,13:05,WORLD,ABCDEF", "12:00,12:14,HELLO,C#DEFGAB"};
+        String[] musicinfos = {"03:00,03:10,FOO,CCB#CCB", "04:00,04:08,BAR,ABC"};
+
 
         Solution solution = new Solution();
         solution.solution(m, musicinfos);
@@ -85,6 +88,7 @@ public class Solution {
             int time = convertTime(endTime) - convertTime(startTime);
             String buildMusic = convertMusic(music, time);
 
+            buildMusic = buildMusic.replace(m+"#", "");
             if (buildMusic.contains(m)) {
                 queue.add(new Music(time, name));
             }
@@ -95,7 +99,6 @@ public class Solution {
             answer = queue.remove().name;
         }
 
-        System.out.println(answer);
         return answer;
     }
 }
