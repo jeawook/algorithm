@@ -16,7 +16,6 @@ public class Solution {
         ArrayList<String> commands = new ArrayList<>();
         ArrayList<String> users = new ArrayList<>();
 
-        int changeCnt = 0;
         for (int i = 0; i < record.length; i++) {
             String command = record[i].split(" ")[0];
             String user = record[i].split(" ")[1];
