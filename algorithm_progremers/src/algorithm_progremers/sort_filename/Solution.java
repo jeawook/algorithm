@@ -1,12 +1,14 @@
 package algorithm_progremers.sort_filename;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class Solution {
 
     public static void main(String[] args) {
-        //String[] files = {"img12.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"};
-        String[] files = {"F-5 Freedom2 Fighter", "B-500000 Superfortress1111", "A-10 Thunderbolt II", "F-14 Tomcat", "foo010bar002.zip"};
+        String[] files = {"img12-0101.png", "img10.png", "img02.png", "img1.png", "IMG01.GIF", "img2.JPG"};
+        //String[] files = {"F-5 Freedom2 Fighter", "B-500000 Superfortress1111", "A-10 Thunderbolt II", "F-14 Tomcat", "foo010bar002.zip"};
         Solution solution = new Solution();
         solution.solution(files);
 
@@ -30,17 +32,18 @@ public class Solution {
 
         @Override
         public int compareTo(File o) {
-            if (this.head.equals(o.head)) {
-                return Integer.compare(this.number, o.number);
+            int result = this.head.compareTo(o.head);
+            if (result == 0) {
+                return this.number - o.number;
             } else {
-                return this.head.compareTo(o.head);
+                return result;
             }
         }
 
     }
     public String[] solution(String[] files) {
         String[] answer = {};
-        PriorityQueue<File> pq = new PriorityQueue<>();
+        ArrayList<File> arr = new ArrayList<>();
         for (String tmp : files) {
             StringBuilder number = new StringBuilder();
             int numCnt = 0;
@@ -56,11 +59,12 @@ public class Solution {
             int location = tmp.indexOf(number.toString());
             String head = tmp.substring(0, location);
             head = head.toUpperCase();
-            pq.add(new File(tmp,head,Integer.parseInt(number.toString())));
+            arr.add(new File(tmp,head,Integer.parseInt(number.toString())));
         }
-        answer = new String[pq.size()];
+        Collections.sort(arr);
+        answer = new String[arr.size()];
         for (int i=0; i < answer.length; i++) {
-            answer[i] = pq.poll().toString();
+            answer[i] = arr.get(i).toString();
         }
 
         return answer;
