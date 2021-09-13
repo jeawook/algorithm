@@ -1,6 +1,5 @@
 package algorithm_progremers.progremers_test;
 
-import algorithm_progremers.that_song.Solution;
 
 public class Solution1 {
 

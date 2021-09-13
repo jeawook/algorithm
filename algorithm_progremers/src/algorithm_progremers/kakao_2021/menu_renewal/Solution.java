@@ -5,28 +5,21 @@ import java.util.HashMap;
 import java.util.HashSet;
 
 public class Solution {
-    static HashSet<String> set = new HashSet<>();
-    public String[] solution(String[] orders, int[] course) {
+    static HashMap<String, Integer> map = new HashMap<>();
+    /*public String[] solution(String[] orders, int[] course) {
         String[] answer = {};
-        HashMap<String, Integer> map = new HashMap<>();
 
         for (String arr : orders) {
-            String[] split = arr.split("");
-            for (String str : split) {
-                set.add(str);
-            }
-        }
-        while (!set.isEmpty()) {
+            char[] chars = arr.toCharArray();
+            for (int i = 0; i < )
+
 
         }
+        for (int i : course) {
+
+        }
+
         return answer;
-    }
+    }*/
 
-    public int resolve(String str,int ptr, int n) {
-        if () {
-
-        }
-
-        return resolve();
-    }
 }
