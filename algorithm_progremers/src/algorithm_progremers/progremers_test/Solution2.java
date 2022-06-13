@@ -10,7 +10,10 @@ public class Solution2 {
         //int[][] queries = {{2,2,5,4}, {3,3,6,6}, {5,1,6,3}};
         int[][] queries = {{1,1,2,2}, {1,2,2,3}, {2,1,3,2}, {2,2,3,3}};
         Solution2 solution2 = new Solution2();
-        solution2.solution(rows, columns, queries);
+        int[] solution = solution2.solution(rows, columns, queries);
+        for (int i : solution) {
+            System.out.println(i);
+        }
     }
 
     public int[] solution(int rows, int columns, int[][] queries) {
